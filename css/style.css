@@ -1,0 +1,141 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat';
+}
+
+.message {
+  position: fixed;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 2vh;
+  padding: 10px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.218);
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.218);
+}
+
+.message.correcto {
+  background: #2fff4b;
+  color: black;
+}
+
+.message.incorrecto {
+  background: #d60000;
+  color: white;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #efefef;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  background: rgba(0, 132, 255, 0.479);
+  border-radius: 50%;
+}
+
+body::after {
+  content: '';
+  bottom: 0;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 132, 255, 0.479);
+  border-radius: 50%;
+}
+
+body .container {
+  margin: 0 5px;
+  max-width: 600px;
+  width: 100%;
+  background: #64c2ed;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.218);
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.218);
+}
+
+body .container .title-tasks {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  padding: 15px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.329);
+}
+
+body .container .form {
+  padding: 10px;
+  background: white;
+}
+
+body .container .form input, body .container .form button {
+  margin: 2px 0;
+  border: 2px solid rgba(0, 0, 0, 0);
+  outline: none;
+  font-size: 1.1rem;
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.218);
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.218);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+body .container .form input:focus, body .container .form button:focus {
+  border: 2px solid rgba(0, 0, 0, 0.425);
+}
+
+body .container .form button {
+  background: #0099ff;
+  cursor: pointer;
+}
+
+body .container .tasks .item-task {
+  position: relative;
+  background: rgba(255, 255, 255, 0.359);
+  margin: 4px;
+  border-radius: 5px;
+  padding: 6px;
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.218);
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.218);
+}
+
+body .container .tasks .item-task p {
+  width: 95%;
+}
+
+body .container .tasks .item-task .btn.delete {
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 2px 5px;
+  background: red;
+  font-weight: bolder;
+}
+
+body .container .tasks .item-task .btn.delete:hover {
+  -webkit-box-shadow: 2px 2px 0 white;
+          box-shadow: 2px 2px 0 white;
+}
+/*# sourceMappingURL=style.css.map */

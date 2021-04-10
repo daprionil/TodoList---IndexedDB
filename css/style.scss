@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+.message{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 2vh;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.218);
+}
+.message.correcto{
+    background: rgb(47, 255, 75);
+    color: black;
+}
+.message.incorrecto{
+    background: rgb(214, 0, 0);
+    color: white;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #efefef;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 0;
+        background: rgba(0, 132, 255, 0.479);
+        border-radius: 50%;
+    }
+    &::after{
+        content: '';
+        bottom: 0;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: rgba(0, 132, 255, 0.479);
+        border-radius: 50%;
+    }
+}
+body{
+    .container{
+        margin: 0 5px;
+        max-width: 600px;
+        width: 100%;
+        background: rgb(100, 194, 237);
+        border-radius: 10px;
+        overflow: hidden;
+        text-align: center;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.218);
+        .title-tasks{
+            font-size: 1.5rem;
+            font-weight: bolder;
+            padding: 15px;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.329);
+        }
+        .form{
+            padding: 10px;
+            background: white;
+            input,button{
+                margin: 2px 0;
+                border: 2px solid rgba(0, 0, 0, 0);
+                outline: none;
+                font-size: 1.1rem;
+                padding: 5px;
+                border-radius: 5px;
+                box-shadow: 0 0 2px rgba(0, 0, 0, 0.218);
+                transition: all .3s;
+                &:focus{
+                    border: 2px solid rgba(0, 0, 0, 0.425);
+                }
+            }
+            button{
+                background: rgb(0, 153, 255);
+                cursor: pointer;
+            }
+        }
+        //Lista de tareas
+        .tasks{
+            .item-task{
+                position: relative;
+                background: rgba(255, 255, 255, 0.359);
+                margin: 4px;
+                border-radius: 5px;
+                padding: 6px;
+                box-shadow: 0 0 2px rgba(0, 0, 0, 0.218);
+                p{
+                    width: 95%;
+                }
+                .btn.delete{
+                    position: absolute;
+                    top: 2px;
+                    right: 5px;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    padding: 2px 5px;
+                    background: red;
+                    font-weight: bolder;
+                    &:hover{
+                        box-shadow: 2px 2px 0 white;
+                    }
+                }
+            }
+        }
+    }
+}
