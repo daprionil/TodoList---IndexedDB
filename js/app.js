@@ -55,6 +55,7 @@ class UI{
             tasksBox.removeChild(tasksBox.firstChild);
         };
     };
+    console
     message(text,type){
         this.clearMessage();
         const msg = document.createElement('div');
@@ -108,12 +109,10 @@ function crearDB(){
     taskDB.onerror = ()=> {console.log('error')};
     taskDB.onsuccess = () => {
         db = taskDB.result;
-        console.log('DB creada', db);
         ui.mostrarTasks();
     };
     taskDB.onupgradeneeded = (e) => {
         db = e.target.result;
-        console.log(db)
         const objectStore = db.createObjectStore('tasks',{keyPath:'id'});
 
         objectStore.createIndex('task','task',{unique:false});
